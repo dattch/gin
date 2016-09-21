@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/gin-gonic/gin/binding"
+	"github.com/Coccodrillo/gin/binding"
 )
 
 const ENV_GIN_MODE = "GIN_MODE"
@@ -19,9 +19,9 @@ const (
 	TestMode    string = "test"
 )
 const (
-	debugCode   = iota
-	releaseCode 
-	testCode  
+	debugCode = iota
+	releaseCode
+	testCode
 )
 
 // DefaultWriter is the default io.Writer used the Gin for debug output and
