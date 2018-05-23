@@ -422,11 +422,13 @@ func (c *Context) Cookie(name string) (string, error) {
 	return val, nil
 }
 
-func (c *Context) Render(code int, r render.Render) {
+func (c *Context) Render(code int, r render.Render) error {
 	c.Status(code)
 	if err := r.Render(c.Writer); err != nil {
-		panic(err)
+		return err
 	}
+
+	return nil
 }
 
 // HTML renders the HTTP template specified by its file name.
@@ -447,11 +449,13 @@ func (c *Context) IndentedJSON(code int, obj interface{}) {
 
 // JSON serializes the given struct as JSON into the response body.
 // It also sets the Content-Type as "application/json".
-func (c *Context) JSON(code int, obj interface{}) {
+func (c *Context) JSON(code int, obj interface{}) error {
 	c.Status(code)
 	if err := render.WriteJSON(c.Writer, obj); err != nil {
-		panic(err)
+		return err
 	}
+
+	return nil
 }
 
 // XML serializes the given struct as XML into the response body.
