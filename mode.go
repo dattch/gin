@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/Coccodrillo/gin/binding"
+	"github.com/dattch/gin/binding"
 )
 
 const ENV_GIN_MODE = "GIN_MODE"

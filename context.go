@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Coccodrillo/gin/binding"
-	"github.com/Coccodrillo/gin/render"
+	"github.com/dattch/gin/binding"
+	"github.com/dattch/gin/render"
 	"github.com/manucorporat/sse"
 	"golang.org/x/net/context"
 )

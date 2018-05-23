@@ -11,7 +11,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/Coccodrillo/gin/render"
+	"github.com/dattch/gin/render"
 )
 
 // Version is Framework's version
